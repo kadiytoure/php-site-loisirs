@@ -13,8 +13,13 @@ $a =$database->login($identifiant, $motdepasse);
 
 if($a !== false){
     $_SESSION['personne'] = serialize($a);
+    echo "Votre identifiant et votre mot de passe sont corrects.";
+    echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav>";
+    //echo  "<nav><a href=\"Authentification.php\"/>accéder à son espace personnel</a></nav>";
 }else{
-    echo ' un problem';
+    echo 'Votre identifiant et/ou votre mot de passe ne sont pas corrects.';
+    echo "<nav><a href=\"inscription.php\"/>Inscris-toi </a></nav>";
+    echo "<nav><a href=\"login.php\"/>Où reconnecte-toi </a></nav>";
 }
 
 

@@ -4,14 +4,16 @@ include_once './Evenement.php';
 include_once './Personne.php';
 
 class Database {
-
+    
     function creerPersonne(Personne $personne) {
+        
         if (!is_dir("Personne")) {
             mkdir("Personne");
         }
         $fichier = fopen("Personne/" . $personne->getLogin() . ".txt", "w");
         fwrite($fichier, serialize($personne));
 //        unserialize(get_file_content('$personne.txt'));
+        echo 'Votre compte a bien été crée, felicitations!';
         fclose($fichier);
     }
 
@@ -28,9 +30,9 @@ class Database {
         //Commencer par vérifier si il existe un utilisateur qui correspond au login
         //en faisant un if avec un is_file dedans, qui vérifie si le fichier
         // './Personne/' . $login . '.txt' existe
-        //if (is_file('Personne/' .$login. '.txt')) {
-        $files = scandir('Personne/');
-        foreach($files as $contenu){
+        if (is_file('Personne/' .$login. '.txt')) {
+//        $files = scandir('Personne/');
+//        foreach($files as $contenu){
             
 //            echo "l'utilisateur est operationnel";
             //Si le fichier existe, alors on récupère son contenu (file_get_content)
@@ -39,9 +41,9 @@ class Database {
             $unserialize = unserialize($contenu);
             //Avec cette instance de personne, il faudra comparer si la variable 
             //$mdp correspond à la propriété motDePasse de l'instance de Personne (avec un getMotDePasse() )
-            if ($mdp == $unserialize->getMotdepasse()) {
+            if ($mdp === $unserialize->getMotdepasse()) {
+                echo 'bravo tu es connecté/e';
                 return $unserialize;
-                echo 'yo t\'es connect';
                 // print_r($_SESSION['personne']);
                 /*session_start();
                 echo "votre mot de passe est correct";
@@ -64,6 +66,7 @@ class Database {
               }
              */
         }
+        return false;
         //Dans tous les autres cas, la connexion échoue.
     }
 

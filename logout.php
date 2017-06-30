@@ -1,6 +1,6 @@
 <?php
 include_once './Personne.php';
-include_once './Database.php';
+
 ?>
 
 <!DOCTYPE html>
