@@ -1,6 +1,6 @@
 
 <?php
-include_once './Personne.php';
+include_once './personne.php';
 
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ include_once './Personne.php';
     </head>
     <body>
         <h1>Espace Authentification</h1>
-        <form method="POST" action="Authentification.php">
+        <form method="POST" action="authentification.php">
             <label for="pseudo">Votre identifiant :</label>
             <input id="pseudo" name="idpseudo" type="text" value=""/><br/>
             <label for="psswd">Votre mot de passe :</label>

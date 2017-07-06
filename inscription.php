@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> Inscription</title>
+        <title>Inscription</title>
     </head>
     <body>
         <h1>Formulaire d'inscription</h1>
@@ -63,30 +63,30 @@
             <input type="radio" name="perso" id="idmarié" checked />
             <label for="marier"> marié(e)</label>
             <p>Quel est votre situation professionnelle?</p>
-            <input type="checkbox" name="chômage" id="idchomage" />
+            <input type="checkbox" name="trav"  value="chômage" id="idchomage" />
             <label for="chmge">au chômage</label>
-            <input type="checkbox" name="reconversion" id="idreconv" />
+            <input type="checkbox"  name="trav" value="reconversion" id="idreconv" />
             <label for="reconv">en reconversion professionnelle</label>
-            <input type="checkbox" name="actif" id="idactif" />
+            <input type="checkbox" name="trav" value="actif" id="idactif" />
             <label for="actif">en profession</label> 
                 </section>
                 </div>
                 <div>
                 <section> 
             <p> Selectionner vo(s) centre(s) d'intérêt</p>
-            <input type="checkbox" name="sports" id="idsports" />
+            <input type="checkbox" name= "interet" value="sports" id="idsports" />
             <label for="sp">sports</label>
-            <input type="checkbox" name="travel" id="idtravel" />
+            <input type="checkbox" name="interet" value="travel" id="idtravel" />
             <label for="vg">voyages</label>
-            <input type="checkbox" name="ct" id="idct" />
+            <input type="checkbox" name="interet" value="ct" id="idct" />
             <label for="ctr">culture</label>
-            <input type="checkbox" name="art" id="idart" />
+            <input type="checkbox" name="interet" value="art" id="idart" />
             <label for="art">arts</label>
-            <input type="checkbox" name="crs" id="idcrs" />
+            <input type="checkbox" name="interet" value="crs" id="idcrs" />
             <label for="crs">education</label> 
-            <input type="checkbox" name="orie" id="idapp" />
+            <input type="checkbox" name="interet" value="orie" id="idapp" />
             <label for="orientation">orientation professionnelle</label>
-            <input type="checkbox" name="gastron" id="idgastron" />
+            <input type="checkbox" name="interet" value="gastron" id="idgastron" />
             <label for="gastronomie">gastronomie</label>
             </section>
                 </div>

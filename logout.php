@@ -1,5 +1,5 @@
 <?php
-include_once './Personne.php';
+include_once './personne.php';
 
 ?>
 

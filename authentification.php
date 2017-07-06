@@ -1,6 +1,6 @@
 <?php
-//session_start();
-include_once './Database.php';
+session_start();
+include_once './database.php';
 
 
 
@@ -9,17 +9,17 @@ $motdepasse = filter_input(INPUT_POST, 'idpsswd') ;
 
 $database = new Database();
 
-$a =$database->login($identifiant, $motdepasse);
+$personne =$database->login($identifiant, $motdepasse);
 
-if($a !== false){
-    $_SESSION['personne'] = serialize($a);
-    echo "Votre identifiant et votre mot de passe sont corrects.";
-    echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav>";
+if($personne !== false){
+    $_SESSION['personne'] = $personne;
+    echo "Ton identifiant et ton mot de passe sont corrects.";
+    echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav></br>";
     //echo  "<nav><a href=\"Authentification.php\"/>accéder à son espace personnel</a></nav>";
 }else{
     echo 'Votre identifiant et/ou votre mot de passe ne sont pas corrects.';
     echo "<nav><a href=\"inscription.php\"/>Inscris-toi </a></nav>";
-    echo "<nav><a href=\"login.php\"/>Où reconnecte-toi </a></nav>";
+    echo "<nav><a href=\"login.php\"/>Où reconnecte-toi </a></nav></br>";
 }
 
 
