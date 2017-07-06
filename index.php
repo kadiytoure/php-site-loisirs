@@ -11,9 +11,6 @@
 
 
         <?php
-        // TODO: Si l'utilisateur n'est pas connécté
-        // TODO: afficher un lien pour se connécter
-        // TODO: afficher un lien pour s'inscrire
         //lancer la session_start
         //Vérifier avec un isset si la variable $_SESSION contient bien une clef personne ( $_SESSION['personne'] )
         session_start();
@@ -27,7 +24,10 @@
         }   
         ?>
 
-        
+        <?php
+        // TODO: Lire les événements depuis la base de données (récupérer un tableau d'événements)
+        // TODO: afficher les événements.
+        ?>
 
     </body>
 </head>

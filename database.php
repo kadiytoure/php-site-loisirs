@@ -21,7 +21,7 @@ class Database {
         if (!is_dir("Evenement")) {
             mkdir("Evenement");
         }
-        $newfile = fopen("Evenement/" . $evenement->getCategorie() . ".txt", "w");
+        $newfile = fopen("Evenement/" . $evenement->getLieu() . ".txt", "w");
         fwrite($newfile, serialize($evenement));
         fclose($newfile);
     }

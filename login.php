@@ -1,8 +1,3 @@
-
-<?php
-include_once './personne.php';
-
-?>
 <!DOCTYPE html>
 <html>
     <head>

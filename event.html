@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <form method="POST"  action="validevent.php">
+        <h1> Créer évenement(s) sportif </h1>
+        <label for="name"> Nom de l'événement sportif:</label> 
+        <input id="name" name="idname" type="text" placeholder="exemple: match de football OL-Nice"/>
+        <br/>
+        <label for="ressrce">Ressources:</label>
+        <input id="ressrce" name="idressrce" type="text" />
+        <br/>
+        <label for="time">Duree:</label>
+        <input id="time" name="idtime" type="text" />
+        <br/>
+        <label for="cap">Capacité:</label>
+        <input id="cap" name="idcap" type="text" />
+        <br/>
+        <label for="town">Lieu de l'événement sportif:</label>
+        <input id="town" name="idtown" type="text" placeholder="exemple: parc OL"/>
+        <br/>
+        <label for='date'>Date de l'événement:</label>
+        <input id='date' name='iddate' type='date'/>
+        <br/>
+        <label for='descriptif'>Description:</label>
+        <textarea name='descriptif' id='descriptif' cols='47' rows='10'></textarea>
+        <br/>
+        <label for="places">Places:</label>
+        <input id="places" name="idplace" type="number">
+        <br/>
+        <input type='submit' value='Valider' />
+    </form>
+    </body>
+</html>
+
+
