@@ -2,32 +2,50 @@
 <html>
     <head>
         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>Inscription</title>
     </head>
     <body>
         <h1>Formulaire d'inscription</h1>
-        <form method="POST" action="utilisateur.php">
-            <div>
-            <label for="nom">Votre nom:</label>
-            <input id="nom" name="idname" type="text" /><br/>
-            <label for="firstname">Votre prenom:</label>
+        <form class='form-horizontal'method="POST" action="utilisateur.php">
+            <div class='form-group'>
+            <label for="nom" class='col-sm-2 control-label'>Votre nom:</label>
+            <div class="col-sm-10">
+            <input id="nom"  name="idname" type="text" /><br/>
+            </div>
+            </div>
+            <div class='form-group'>
+            <label for="firstname" class='col-sm-2 control-label'>Votre prenom:</label>
+            <div class='col-sm-10'>
             <input id="prenom" name="idprenom" type="text"/><br/>
+            </div>
+            </div>
             <label for="age">âge: </label>
             <input id="age" name="idage" type="number" /><br/>
-            </div> 
             <div>
             <p>Votre sexe:</p>
             <input type='radio' name='genre' value="male" id="genretwo" checked />
             <label for="genretwo"> masculin</label>
             <input type="radio" name="genre" value="female" id="genreone" />
             <label for="genreone"> feminin </label><br/>
-              <label for="mail">Votre mail: </label>
+            <div class='form-group'>
+            <label for="mail" class='col-sm-2 control-label'>Votre mail: </label>
+            <div class='col-sm-10'>
             <input id="mail" name="idmail" type="email" />
-            <label for="identifiant"> Votre identifiant:</label>
-            <input id="identifiant" name="ididentifiant" type="text"/><br/>
-            <label for="psswd">Votre mot de passe :</label>
+            </div>
+            </div>
+            <div class='form-group'>
+            <label for="identifiant" class='col-sm-2 control-label'>Votre identifiant:</label>
+            <div class='col-sm-10'>
+            <input id="identifiant"  name="ididentifiant" type="text"/><br/>
+            </div>
+            </div>
+            <div class='form-group'>
+            <label for="psswd" class='col-sm-2 control-label'>Votre mot de passe :</label>
+            <div class='col-sm-10'>
             <input id="psswd" name="idpsswd" type="password" /><br/>
                 </div>
+            </div>
             <div>
                 <div>
             <label for="pays"> Dans quel pays habitez-vous?</label><br />
@@ -61,11 +79,11 @@
             <label for="marier"> marié(e)</label>
             <p>Quel est votre situation professionnelle?</p>
             <input type="checkbox" name="trav"  value="chômage" id="idchomage" />
-            <label for="chmge">au chômage</label>
+            <label for="chmge" class='checkbox-inline'>au chômage</label>
             <input type="checkbox"  name="trav" value="reconversion" id="idreconv" />
-            <label for="reconv">en reconversion professionnelle</label>
+            <label for="reconv" class='checkbox-inline'>en reconversion professionnelle</label>
             <input type="checkbox" name="trav" value="actif" id="idactif" />
-            <label for="actif">en profession</label> 
+            <label for="actif" class='checkbox-inline'>en profession</label> 
                 </section>
                 </div>
                 <div>
