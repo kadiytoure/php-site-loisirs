@@ -24,18 +24,15 @@ if (!isset($_SESSION['personne'])) {
     echo "vous n'êtes pas connecté!";
     exit();
 }
-
+if(!empty($nom) && !empty($lieu) && !empty($date) && !empty($description) && !empty($places) && !empty($duree) && !empty($ressources) && !empty($capacite)){
 $event = new Evenement($date, $lieu, $places, $nom, $duree, $description, $ressources, $capacite);
 $database = new Database();
 $database->creerEvenement($event);
 $perso = $_SESSION['personne'];
-
-if($database->creerEvenement($event) !== false) {
-    echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav>";
-    echo "Bravo! L'événement a bien été crée!</br>";
+echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav>";
+echo "super, événement crée";
 }else{
-    echo "<nav><a href=\"event.html\"/>retour à la page d'accueil </a></nav>";
-    echo "l'évenement n'a pu être crée, revois tes informations!";
-    
+    echo "<nav><a href=\"event.html\"/>recrée ton événement </a></nav>";
+    echo "événement n'ayant pu être crée, recommence";
 }
 

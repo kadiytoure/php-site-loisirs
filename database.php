@@ -39,7 +39,7 @@ class Database {
                     
             }      else {
 
-                $result[] = $value;
+                $result[] = unserialize ($value);
             }
         }
         return $result;
