@@ -7,7 +7,7 @@ $nom = filter_input(INPUT_POST, 'logout');
 
 //edrheader('location: ./logout.php');
 session_start();
-if (isset($_POST['logout']) && (isset($_SESSION['personne']))) {
+if (isset($_POST['logout']) && isset($_SESSION['personne'])) {
     $quitter=new Database();
     $quitter->logout();
     echo "Merci d'être passé sur notre site, à bientôt!";

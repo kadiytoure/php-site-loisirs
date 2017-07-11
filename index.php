@@ -8,7 +8,7 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>Page d'accueil</title>
     <body>
-        <h1>Bienvenue au site dédié aux meetups sportifs!</h1>
+        <h1>Bienvenue au site dédié aux meetups loisirs!</h1>
 
 
         <?php
@@ -26,10 +26,18 @@
         }   
         ?>
 
-        <?php
+        <?php        include_once './database.php';
         // TODO: Lire les événements depuis la base de données (récupérer un tableau d'événements)
         // TODO: afficher les événements.
-        ?>
+        $database = new Database();
+        $afficheevent = $database->getEvenements();
+        foreach($afficheevent as $showevent){
+            $showevent->affichage();
+//          echo   var_dump($showevent);
+        }
+       
+       ?>
+        
 
     </body>
 </head>

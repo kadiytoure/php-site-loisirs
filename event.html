@@ -7,33 +7,63 @@
         <title>Création d'événement</title>
     </head>
     <body>
-    <form method="POST"  action="validevent.php">
+    <form class="form-horizontal" method="POST"  action="validevent.php">
         <h1> Créer évenement(s) sportif </h1>
-        <label for="name"> Nom de l'événement sportif:</label> 
+        <div class="form-group"> 
+        <label for="name" class="col-sm-2 control-label"> Nom de l'événement sportif:</label> 
+        <div class="col-sm-10">
         <input id="name" name="idname" type="text" placeholder="exemple: match de football OL-Nice"/>
+        </div>
+         </div>
         <br/>
-        <label for="ressrce">Ressources:</label>
+        <div class="form-group">
+        <label for="ressrce" class="col-sm-2 control-label">Ressources:</label>
+        <div class="col-sm-10"> 
         <input id="ressrce" name="idressrce" type="text" />
+        </div>
+        </div>
         <br/>
-        <label for="time">Duree:</label>
+        <div class="form-group">
+        <label for="time" class="col-sm-2 control-label">Duree:</label>
+        <div class="col-sm-10">
         <input id="time" name="idtime" type="text" />
+        </div>
+        </div>
         <br/>
-        <label for="cap">Capacité:</label>
+        <div class="form-group">
+        <label for="cap" class="col-sm-2 control-label">Capacité:</label>
+        <div class = "col-sm-10">
         <input id="cap" name="idcap" type="text" />
+        </div>
+        </div>
         <br/>
-        <label for="town">Lieu de l'événement sportif:</label>
+        <div class="form-group"> 
+        <label for="town" class="col-sm-2 control-label">Lieu de l'événement sportif:</label>
+        <div class="col-sm-10">
         <input id="town" name="idtown" type="text" placeholder="exemple: parc OL"/>
+        </div>
+        </div>
         <br/>
-        <label for='date'>Date de l'événement:</label>
+        <div class="form-group">
+        <label for='date' class="col-sm-2 control-label">Date de l'événement:</label>
+        <div class="col-sm-10">
         <input id='date' name='iddate' type='date'/>
+        </div>
+        </div>
         <br/>
         <label for='descriptif'>Description:</label>
-        <textarea name='descriptif' id='descriptif' cols='47' rows='10'></textarea>
+        <textarea  name='descriptif' id='descriptif' cols='47' rows='10'></textarea>
         <br/>
-        <label for="places">Places:</label>
+        <div class="form-group">
+        <label class="col-sm-2 control-label" for="places">Places:</label>
+        <div class="col-sm-10">
         <input id="places" name="idplace" type="number">
+        </div>
+        </div>
         <br/>
-        <input type='submit' value='Valider' />
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+        <input type='submit' class='btn btn-default' value='Valider' />
     </form>
     </body>
 </html>

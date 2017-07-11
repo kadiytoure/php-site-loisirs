@@ -25,34 +25,39 @@ class Database {
         fwrite($newfile, serialize($evenement));
         fclose($newfile);
     }
-    
 
-/*
     //Créer une méthode getEvenements() qui va aller scanner le dossier des évènements et les renvoyer sous forme de tableau
-    
-    function getEvenements() {
-        $result = array();
-        $cdir = scandir("Evenement/");
-        foreach ($cdir as $key => $value) {
-            if (!in_array($value, array(".", ".."))) {
-                if (is_dir($cdir . DIRECTORY_SEPARATOR . $value)){
-                    
-            }      else {
 
-                $result[] = unserialize ($value);
+    function getEvenements() {
+        $event = array();
+        $cdir = scandir("Evenement/");
+        foreach ($cdir as $evenement) {
+
+            if (is_file('Evenement/' . $evenement)) {
+                $content = file_get_contents('Evenement/' . $evenement);
+                $unserialize = unserialize($content);
+//                if (!in_array($value, array(".", ".."))) {
+//                    if (!is_dir($cdir . DIRECTORY_SEPARATOR . $value)) {
+
+
+                $event[] = $unserialize;
+//                    }
+//                }
             }
         }
-        return $result;
+        return $event;
     }
-      
 
-    //faire un tableau vide qui contiendra les évènements
-    //faire un scandir de ton dossier évènement
-    //faire un get contents de chaque fichier de ce dossier et le unserialize
-    //rajouter le contenu unserializé à l'intérieur du tableau
-    //faire un return du tableau
+    /*
 
-*/
+      //faire un tableau vide qui contiendra les évènements
+      //faire un scandir de ton dossier évènement
+      //faire un get contents de chaque fichier de ce dossier et le unserialize
+      //rajouter le contenu unserializé à l'intérieur du tableau
+      //faire un return du tableau
+
+     */
+
     function login($login, $mdp) {
         //Commencer par vérifier si il existe un utilisateur qui correspond au login
         //en faisant un if avec un is_file dedans, qui vérifie si le fichier
@@ -102,4 +107,3 @@ class Database {
     }
 
 }
-
