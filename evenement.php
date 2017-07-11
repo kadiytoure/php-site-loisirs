@@ -12,19 +12,21 @@ class Evenement {
     protected $duree;
     protected $description;
     //Ajouter une propriété représentant l'organisateur de l'évènement
-    
+    protected $organisateur;
     protected $ressources;
     protected $capacite;
     
-    function __construct($date, $lieu, $places, $nom, $duree, $description, $ressources, $capacite) {
+    function __construct($date, $lieu, $places, $nom, $duree, $description, $organisateur, $ressources, $capacite) {
         $this->date = $date;
         $this->lieu = $lieu;
         $this->places = $places;
         $this->nom = $nom;
         $this->duree = $duree;
         $this->description = $description;
+        $this->organisateur = $organisateur;
         $this->ressources = $ressources;
         $this->capacite = $capacite;
+        
     }
     function getDate() {
         return $this->date;
@@ -58,11 +60,16 @@ class Evenement {
     function getCapacite() {
         return $this->capacite;
     }
+    
+    function getOrganisateur() {
+        return $this->organiser;
+    }
 
 function genererhtmlevents() {
     echo'<h2>informations generales sur l\'evenement:</h2>';
     echo '<section>';
-    echo "<h3> nom : </h3><p>". $this->nom . '</p>';   
+    echo "<h3> nom : </h3><p>". $this->nom . '</p>';
+    echo "<h3> organisateur : </h3><p>". $this->organisateur . '</p>'; 
     echo "<h3>date : </h3><p>". $this->date . '</p>';
     echo "<h3> lieu : </h3><p>". $this->lieu . '</p>';
     echo "<h3> duree : </h3><p> ". $this->duree . '</p>';    
