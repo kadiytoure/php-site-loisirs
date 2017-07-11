@@ -21,6 +21,12 @@ class Database {
         if (!is_dir("Evenement")) {
             mkdir("Evenement");
         }
+        //créer un sous dossier du nom de l'organisateur de l'évènement
+        //à l'intérieur du dossier Evenement (on pourra récupérer cet
+        //organisateur avec $evenement->getOrganisateur() par exemple)
+        
+        //modifier le fopen pour que l'évènement soit sauvegarder dans le 
+        //bon sous dossier
         $newfile = fopen("Evenement/" . $evenement->getLieu() . ".txt", "w");
         fwrite($newfile, serialize($evenement));
         fclose($newfile);
@@ -32,6 +38,8 @@ class Database {
         $event = array();
         $cdir = scandir("Evenement/");
         foreach ($cdir as $evenement) {
+            //faire un second foreach pour parcourir tous les fichiers
+            //contenus dans chaque sous dossier 
 
             if (is_file('Evenement/' . $evenement)) {
                 $content = file_get_contents('Evenement/' . $evenement);

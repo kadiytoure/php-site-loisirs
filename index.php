@@ -32,7 +32,7 @@
         $database = new Database();
         $afficheevent = $database->getEvenements();
         foreach($afficheevent as $showevent){
-            $showevent->affichage();
+            $showevent->genererhtmlevents();
 //          echo   var_dump($showevent);
         }
        

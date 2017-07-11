@@ -25,6 +25,7 @@ if (!isset($_SESSION['personne'])) {
     exit();
 }
 if(!empty($nom) && !empty($lieu) && !empty($date) && !empty($description) && !empty($places) && !empty($duree) && !empty($ressources) && !empty($capacite)){
+    //modifier le new Evenement pour rajouter l'organisateur que tu récupère en $_SESSION
 $event = new Evenement($date, $lieu, $places, $nom, $duree, $description, $ressources, $capacite);
 $database = new Database();
 $database->creerEvenement($event);
