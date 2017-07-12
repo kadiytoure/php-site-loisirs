@@ -5,7 +5,7 @@ include_once './database.php';
 
 
 $identifiant = filter_input(INPUT_POST, 'idpseudo');
-$motdepasse = filter_input(INPUT_POST, 'idpsswd') ;
+$motdepasse = filter_input(INPUT_POST, 'idpsswd');
 
 $database = new Database();
 

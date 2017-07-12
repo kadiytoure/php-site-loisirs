@@ -62,7 +62,7 @@ class Evenement {
     }
     
     function getOrganisateur() {
-        return $this->organiser;
+        return $this->organisateur;
     }
 
 function genererhtmlevents() {
