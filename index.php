@@ -30,10 +30,13 @@
         // TODO: Lire les événements depuis la base de données (récupérer un tableau d'événements)
         // TODO: afficher les événements.
         $database = new Database();
+        echo "début" ;
         $afficheevent = $database->getEvenements();
+        echo "fin" ;
+        ($afficheevent);
         foreach($afficheevent as $showevent){
-            $showevent->genererhtmlevents();
-//          echo   var_dump($showevent);
+           $showevent->genererhtmlevents();
+           ($showevent);
         }
        
        ?>

@@ -24,12 +24,12 @@ class Database {
         //créer un sous dossier du nom de l'organisateur de l'évènement
         //à l'intérieur du dossier Evenement (on pourra récupérer cet
         //organisateur avec $evenement->getOrganisateur() par exemple)
-        if (!is_dir("Evenement/" . $evenement->getOrganisateur()->getLogin())) {
-            mkdir("Evenement/" . $evenement->getOrganisateur()->getLogin());
+        if (!is_dir("Evenement/" . $evenement->getOrganisateur())) {
+            mkdir("Evenement/" . $evenement->getOrganisateur());
         }
         //modifier le fopen pour que l'évènement soit sauvegarder dans le 
         //bon sous dossier
-        $newfile = fopen("Evenement/" . $evenement->getOrganisateur()->getLogin() . "/" . $evenement->getNom() . ".txt", "w");
+        $newfile = fopen("Evenement/" . $evenement->getOrganisateur() . "/" . $evenement->getNom() . ".txt", "w");
         fwrite($newfile, serialize($evenement));
         fclose($newfile);
     }
@@ -39,22 +39,37 @@ class Database {
     function getEvenements() {
         $event = array();
         $cdir = scandir("Evenement/");
-        foreach ($cdir as $evenement) {
+        foreach ($cdir as $dossier_organiser) {
             //faire un second foreach pour parcourir tous les fichiers
-            //contenus dans chaque sous dossier 
-            $files = scandir("Evenement/" . $evenement);
-            foreach ($files as $file) {
-                if (is_file('Evenement/' . $evenement)) {
-                    $content = file_get_contents('Evenement/' . $evenement);
-                    $unserialize = unserialize($content);
+            //contenus dans chaque sous dossier
+            // supprimer les '.' && '..';
+            echo $dossier_organiser ;
+            if ($dossier_organiser !== '.' && $dossier_organiser !== '..') {
+                $files = scandir("Evenement/" . $dossier_organiser);
+                foreach ($files as $file) {
+                    if (is_file('Evenement/' . $dossier_organiser . "/" . $file)) {
+                        echo   "Evenement/" . $dossier_organiser . "/" . $file;
+                        $contenu_event = file_get_contents("Evenement/" . $dossier_organiser . "/" . $file);
+                        $content = unserialize($contenu_event);
+                        //var_dump($content);
+                        $event[] = $content;
+                        ($event);
+                        //echo "fichier : ".$evenement;
+                        //$files = file_get_contents("Evenement/" . $evenement);
+                        //foreach ($files as $file) {
+                        //if (is_file('Evenement/' . $evenement)) {
+                        //$content = file_get_contents('Evenement/' . $evenement);
+                        //$unserialize = unserialize($content);
 //                if (!in_array($value, array(".", ".."))) {
 //                    if (!is_dir($cdir . DIRECTORY_SEPARATOR . $value)) {
-
-
-                    $event[] = $unserialize;
+                        //                $event[] = $unserialize;
 //                    }
+                        //               }
+                    }
+                    // }
                 }
             }
+            
         }
         return $event;
     }
