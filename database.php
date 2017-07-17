@@ -131,5 +131,16 @@ class Database {
 
         session_destroy();
     }
+    
+    //faire une fonction de suppression d'un évènement qui acceptera en argument un identifiant (genre
+    //le nom de l'évènement ou autre) et qui ira supprimer le fichier qui lui est lié sur le pc
+    
+function supp ($file, $dossier) {
+    if (is_file ("Evenement/" . $dossier."/" . $file . '.txt')) {
 
+   unlink("Evenement/" . $dossier."/" . $file . '.txt');
+    }
+
+}
+  
 }

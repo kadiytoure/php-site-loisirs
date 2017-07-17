@@ -76,7 +76,12 @@ function genererhtmlevents() {
     echo "<h3> places : </h3><p>". $this->places . '</p>';
     echo "<h3> ressources : </h3><p>". $this->ressources . '</p>';
     echo "<h3> capacite : </h3><p>". $this->capacite . '</p>';
-    echo "<h3> description : </h3><p> ". $this->description . '</p>';    
+    echo "<h3> description : </h3><p> ". $this->description . '</p>';  
+  
+    if (isset($_SESSION['personne']) && $_SESSION['personne'] == $this->organisateur) {
+              ech
+              echo '<button>supprimer</button>';
+           }
     echo '</section>';
 
 }
