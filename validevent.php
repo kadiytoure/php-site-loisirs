@@ -30,7 +30,7 @@ if(!empty($nom) && !empty($lieu) && !empty($date) && !empty($description) && !em
     ($organiser);
     $organiser = $organiser->getLogin();
     echo $organiser;
-$event = new Evenement($date, $lieu, $places, $nom, $duree, $description,$organiser, $ressources, $capacite );
+$event = new Evenement($date, $lieu, $places, $nom, $duree, $description,$organiser, $ressources, $capacite);
        // $date, $lieu, $places, $nom, $duree, $description, $organisateur, $ressources, $capacite);
 $database = new Database();
 $database->creerEvenement($event);
