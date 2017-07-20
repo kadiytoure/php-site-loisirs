@@ -6,11 +6,19 @@ session_start();
 
 
 
-$button = filter_input(INPUT_POST, 'delete');
-$_SESSION['personne'];
+$button = filter_input(INPUT_POST, 'supp');
+
 //faire new database où l'on appelle la fonction qui se trouve dans database, cf->validevent.php;
-$data = new Database();
-$data->supp($button);
+$database = new Database();
+$file = $button;
+$dossier = $_SESSION['personne'];
+
+$database->supp($file, $dossier);
+
+
+
+echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav>";
+echo "super, événement supprimé";
 /*
 $delete = $_POST['delete'];
 echo '<p>' . $filename . '</p>';
@@ -24,6 +32,3 @@ if(is_file( "Evenement/($_POST['delete']))) {
 }
  * 
  */
-function supprimer() {
-    
-}

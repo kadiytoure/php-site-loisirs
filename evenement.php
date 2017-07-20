@@ -14,8 +14,9 @@ class Evenement {
     protected $organisateur;
     protected $ressources;
     protected $capacite;
+    protected $categorie;
 
-    function __construct($date, $lieu, $places, $nom, $duree, $description, $organisateur, $ressources, $capacite) {
+    function __construct($date, $lieu, $places, $nom, $duree, $description, $organisateur, $ressources, $capacite, $categorie) {
         $this->date = $date;
         $this->lieu = $lieu;
         $this->places = $places;
@@ -25,6 +26,7 @@ class Evenement {
         $this->organisateur = $organisateur;
         $this->ressources = $ressources;
         $this->capacite = $capacite;
+        $this->categorie = $categorie;
     }
 
     function getDate() {
@@ -61,6 +63,10 @@ class Evenement {
 
     function getOrganisateur() {
         return $this->organisateur;
+    }
+    
+    function getCategorie() {
+        return $this->categorie;
     }
 
     function genererhtmlevents() {

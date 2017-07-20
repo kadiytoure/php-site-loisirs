@@ -48,7 +48,7 @@ class Database {
                 $files = scandir("Evenement/" . $dossier_organiser);
                 foreach ($files as $file) {
                     if (is_file('Evenement/' . $dossier_organiser . "/" . $file)) {
-                        echo   "Evenement/" . $dossier_organiser . "/" . $file;
+                      
                         $contenu_event = file_get_contents("Evenement/" . $dossier_organiser . "/" . $file);
                         $content = unserialize($contenu_event);
                         //var_dump($content);
