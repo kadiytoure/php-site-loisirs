@@ -18,19 +18,20 @@ $places = filter_input(INPUT_POST, 'idplace');
 $duree = filter_input(INPUT_POST, 'idtime');
 $ressources = filter_input(INPUT_POST, 'idressrce');
 $capacite = filter_input(INPUT_POST, 'idcap');
+$category = filter_input(INPUT_POST, 'interet');
 
 if (!isset($_SESSION['personne'])) {
     echo "<nav><a href=\"login.php\"/>se connecter </a></nav>";
     echo "vous n'êtes pas connecté!";
     exit();
 }
-if(!empty($nom) && !empty($lieu) && !empty($date) && !empty($description) && !empty($places) && !empty($duree) && !empty($ressources) && !empty($capacite)){
+if(!empty($nom) && !empty($lieu) && !empty($date) && !empty($description) && !empty($places) && !empty($duree) && !empty($ressources) && !empty($capacite) && !empty($category)){
     //modifier le new Evenement pour rajouter l'organisateur que tu récupère en $_SESSION
     $organiser = $_SESSION['personne'];
   
    
   
-$event = new Evenement($date, $lieu, $places, $nom, $duree, $description,$organiser, $ressources, $capacite);
+$event = new Evenement($date, $lieu, $places, $nom, $duree, $description,$organiser, $ressources, $capacite, $category);
        // $date, $lieu, $places, $nom, $duree, $description, $organisateur, $ressources, $capacite);
 $database = new Database();
 $database->creerEvenement($event);
