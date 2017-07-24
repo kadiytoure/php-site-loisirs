@@ -18,20 +18,7 @@ class Database {
     }
 
     function creerEvenement(Evenement $evenement) {
-        if (!is_dir("Evenement")) {
-            mkdir("Evenement");
-        }
-        //créer un sous dossier du nom de l'organisateur de l'évènement
-        //à l'intérieur du dossier Evenement (on pourra récupérer cet
-        //organisateur avec $evenement->getOrganisateur() par exemple)
-        if (!is_dir("Evenement/" . $evenement->getOrganisateur())) {
-            mkdir("Evenement/" . $evenement->getOrganisateur());
-        }
-        //modifier le fopen pour que l'évènement soit sauvegarder dans le 
-        //bon sous dossier
-        $newfile = fopen("Evenement/" . $evenement->getOrganisateur() . "/" . $evenement->getNom() . ".txt", "w");
-        fwrite($newfile, serialize($evenement));
-        fclose($newfile);
+       //todo à refaire
     }
 
     //Créer une méthode getEvenements() qui va aller scanner le dossier des évènements et les renvoyer sous forme de tableau
