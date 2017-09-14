@@ -4,7 +4,8 @@ include_once './evenement.php';
 include_once './personne.php';
 
 class Database {
-
+  
+/*
     function creerPersonne(Personne $personne) {
 
         if (!is_dir("Personne")) {
@@ -16,9 +17,36 @@ class Database {
         //echo 'Votre compte a bien été crée, felicitations!';
         fclose($fichier);
     }
-
+    */
+    
+       private $db;
+       public function __construct(){
+            $this->db = new PDO('mysql:host=localhost;dbname=first_db', 'toure', 'kadiy');
+           $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       } 
+       
+       public function addPerson(Personne $personne):bool{
+       
+         $queryInsert = $this->db->prepare('INSERT INTO `personne` '
+                 .'(id, nom, motdepasse, mail, prenom, age, interet, region, sexe, situation, login)'
+                 . "VALUES (:id, :nom, :motdepasse)");
+       }
+      
     function creerEvenement(Evenement $evenement) {
-       //todo à refaire
+        if (!is_dir("Evenement")) {
+            mkdir("Evenement");
+        }
+        //créer un sous dossier du nom de l'organisateur de l'évènement
+        //à l'intérieur du dossier Evenement (on pourra récupérer cet
+        //organisateur avec $evenement->getOrganisateur() par exemple)
+        if (!is_dir("Evenement/" . $evenement->getOrganisateur())) {
+            mkdir("Evenement/" . $evenement->getOrganisateur());
+        }
+        //modifier le fopen pour que l'évènement soit sauvegarder dans le 
+        //bon sous dossier
+        $newfile = fopen("Evenement/" . $evenement->getOrganisateur() . "/" . $evenement->getNom() . ".txt", "w");
+        fwrite($newfile, serialize($evenement));
+        fclose($newfile);
     }
 
     //Créer une méthode getEvenements() qui va aller scanner le dossier des évènements et les renvoyer sous forme de tableau
