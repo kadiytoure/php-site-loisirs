@@ -26,7 +26,7 @@ if(!empty($name) && !empty($firstname) && !empty($years) && !empty($fem) && !emp
     $utilisateur = new Personne($name, $psswd, $mssge, $firstname, $years, $sport, $home, $fem, $cple,$identite);
 
     $database = new Database();
-    $database->updateData($utilisateur);
+    $database->addPerson($utilisateur);
     echo "<nav><a href=\"index.php\"/>retour à l'accueil</a></nav>";
     echo "<nav><a href=\"login.php\"/> ou se connecter à son compte</a></nav>";
     echo "felicitations! ton compte a bien été crée!";

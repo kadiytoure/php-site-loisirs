@@ -21,15 +21,36 @@ class Database {
     
        private $db;
        public function __construct(){
-            $this->db = new PDO('mysql:host=localhost;dbname=first_db', 'toure', 'kadiy');
+            $this->db = new PDO('mysql:host=localhost;dbname=events', 'toure', 'kadiy');
            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        } 
        
        public function addPerson(Personne $personne):bool{
        
          $queryInsert = $this->db->prepare('INSERT INTO `personne` '
-                 .'(id, nom, motdepasse, mail, prenom, age, interet, region, sexe, situation, login)'
-                 . "VALUES (:id, :nom, :motdepasse)");
+                 .'(nom, motdepasse, mail, prenom, age, interet, region, sexe, situation, login)'
+                 . "VALUES ( :nom, :motdepasse, :mail, :prenom, :age, :interet, :region, :sexe, :situation, :login)");
+         //assignation des paramètres;
+//         $queryInsert->bindValue('id', $personne->getId(), PDO::PARAM_STR);
+         $queryInsert->bindValue('nom', $personne->getNom(), PDO::PARAM_STR);
+         $queryInsert->bindValue('motdepasse', $personne->getMotdepasse(), PDO::PARAM_STR);
+         $queryInsert->bindValue('mail', $personne->getMail(), PDO::PARAM_STR);
+         $queryInsert->bindValue('prenom', $personne->getPrenom(), PDO::PARAM_STR);
+         $queryInsert->bindValue('age', $personne->getAge(), PDO::PARAM_STR);
+         $queryInsert->bindValue('interet', $personne->getInteret(), PDO::PARAM_STR);
+         $queryInsert->bindValue('region', $personne->getRegion(), PDO::PARAM_STR);
+         $queryInsert->bindValue('sexe', $personne->getSexe(), PDO::PARAM_STR);
+         $queryInsert->bindValue('situation', $personne->getSituation(), PDO::PARAM_STR);
+         $queryInsert->bindValue('login', $personne->getLogin(), PDO::PARAM_STR);
+         //on execute en vérifiant si l'éxecution fonctionne ou non
+         if ($queryInsert->execute()){
+             //Si oui on récupère l'id de la ligne qui vient d'être ajoutée 
+            $personne->setId(intval($this->db->lastInsertId()));
+            //On envoie true pour dire que tout s'est bien passé
+            return true;
+         }
+         //On renvoie false si il y a un problème quelconque
+         return false;
        }
       
     function creerEvenement(Evenement $evenement) {

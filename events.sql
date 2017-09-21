@@ -1,3 +1,8 @@
+use events;
+DROP TABLE IF EXISTS `personne`;
+DROP TABLE IF EXISTS `evenement`;
+
+
 CREATE TABLE personne (
 id INT(65) PRIMARY KEY, 
 nom VARCHAR(65), 
@@ -5,7 +10,7 @@ motdepasse VARCHAR(65),
 mail VARCHAR(65), 
 prenom VARCHAR(65), 
 age INT(65), 
-interêt VARCHAR(65), 
+interet VARCHAR(65), 
 region VARCHAR(65), 
 sexe VARCHAR(30), 
 situation VARCHAR(65),
