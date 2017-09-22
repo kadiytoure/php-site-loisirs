@@ -19,6 +19,7 @@
              echo "<a href=\"logout.php\">Se deconnecter </a>";
             echo "<a href=\"deconnexion.php\"></a><br/>";
             echo "<a href=\"event.html\">Créer évenement </a>";
+             echo "<a href=\"allevents.php\">Visualiser les événements crées</a>";
             
         } else {
             echo "<a href=\"login.php\">Acceder à son compte </a>";
