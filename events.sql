@@ -31,5 +31,8 @@ capacite varchar (607),
 categorie VARCHAR(57)
 );
 
+INSERT INTO personne (nom,motdepasse,mail,prenom,age,interet,region,sexe,situation,login) VALUES ('test','test','test','test',10,'test','test','test','test','test');
+
+
 
 
