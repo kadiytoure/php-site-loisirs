@@ -26,54 +26,7 @@
         }   
         ?>
 
-        <?php        include_once './database.php';
-                     include_once './personne.php';
-                     include_once './evenement.php';
-        // TODO: Lire les événements depuis la base de données (récupérer un tableau d'événements)
-        // TODO: afficher les événements.
-        $database = new Database();
-       
-     
-        $afficheevent = $database->getEvenements();
-        
-        ($afficheevent);
-        foreach($afficheevent as $showevent){
-        
-           $showevent->genererhtmlevents();
-           //($showevent);
-           //vérifier avec un if si l'utilisateur est connecté et si oui, vérifier si
-           //l'utilisateur connecté correspond à l'utilisateur organisateur de l'évènement
-           
-           //si oui, on affiche un petit formulaire avec un bouton pour supprimer l'évènement
-           
-           //Le formulaire en question devra pointer vers une page où le traitement de la suppression
-           //sera fait
-           
-           
-           
-           /*
-           if($login == $user){
-                $user = $_SESSION['personne'];
-               $login = $user->getOrganisateur();
-                echo '<form action="rmevent.php" method="POST"/>
-                    <input type="submit" value="delete"/>
-                </form>';
-           }
-           
-           
-           
-           /*
-           
-           $user = $user->getLogin();
-           
-           if ($user = SESSION['personne']->getLogin()) {
-           ?>   
-           <form action="rmevent.php" method="POST"/>
-           <input type="submit" value="delete"/>
-    </form>
-           <?php    
-           }*/
-        }
+        <?php   
        ?>
           
           

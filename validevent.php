@@ -37,7 +37,8 @@ $database = new Database();
 $database->creerEvenement($event);
 $perso = $_SESSION['personne'];
 echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav>";
-echo "super, événement crée";
+echo "<nav><a href=\"allevents.php\"/>Visualiser l'événement </a></nav>";
+echo "Bravo! Evenement crée!";
 }else{
     echo "<nav><a href=\"event.html\"/>recrée ton événement </a></nav>";
     echo "événement n'ayant pu être crée, recommence";
