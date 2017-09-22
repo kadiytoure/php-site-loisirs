@@ -3,7 +3,7 @@
 
 class Personne {
 //put your code here
-
+protected $id;
 protected $nom;
 protected $motdepasse;
 protected $mail;
@@ -69,6 +69,14 @@ function getLogin() {
     return $this->login;
 }
 
+
+function getId() {
+    return $this->id;
+}
+
+function setId($id) {
+    $this->id = $id;
+}
 
 
 
