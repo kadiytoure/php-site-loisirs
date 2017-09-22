@@ -78,17 +78,7 @@ class Database {
                         //var_dump($content);
                         $event[] = $content;
                         ($event);
-                        //echo "fichier : ".$evenement;
-                        //$files = file_get_contents("Evenement/" . $evenement);
-                        //foreach ($files as $file) {
-                        //if (is_file('Evenement/' . $evenement)) {
-                        //$content = file_get_contents('Evenement/' . $evenement);
-                        //$unserialize = unserialize($content);
-//                if (!in_array($value, array(".", ".."))) {
-//                    if (!is_dir($cdir . DIRECTORY_SEPARATOR . $value)) {
-                        //                $event[] = $unserialize;
-//                    }
-                        //               }
+ 
                     }
                     // }
                 }
