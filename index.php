@@ -9,6 +9,7 @@
         <title>Page d'accueil</title>
     <body>
         <h1>Bienvenue au site dédié aux meetups loisirs!</h1>
+        
 
 
         <?php
@@ -19,8 +20,7 @@
              echo "<a href=\"logout.php\">Se deconnecter </a>";
             echo "<a href=\"deconnexion.php\"></a><br/>";
             echo "<a href=\"event.html\">Créer évenement </a>";
-             echo "<a href=\"allevents.php\">Visualiser les événements crées</a>";
-            
+            echo "<a href=\"allevents.php\">Visualiser les événements crées</a>";    
         } else {
             echo "<a href=\"login.php\">Acceder à son compte </a>";
             echo "<a href=\"inscription.php\">Nouveau membre? S'inscrire</a><br/>";

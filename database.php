@@ -99,11 +99,18 @@ class Database {
      */
 
     function login($login, $mdp) {
-        
+//        if(isset($login) AND isset($mdp) AND $login != NULL AND $mdp != NULL){
+//            echo "success of authentification!";
+//        }else{
+//            echo "authentification failed";
+//            exit(1);
+//        }
         $queryInsert = $this->db->prepare("SELECT * FROM personne WHERE login=:login AND motdepasse=:mdp");
         $queryInsert->bindValue('login', $login, PDO::PARAM_STR);
         $queryInsert->bindValue('mdp', $mdp, PDO::PARAM_STR);
-        if ($queryInsert->execute()){
+        $queryInsert->execute();
+           if ($queryInsert->rowCount() == 1){
+               $ligneid = $queryInsert->fetch();
 //           $personne->setId(intval($this->db->lastInsertId())); 
            return true;
  

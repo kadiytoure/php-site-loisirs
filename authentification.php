@@ -10,6 +10,7 @@ $motdepasse = filter_input(INPUT_POST, 'idpsswd');
 $database = new Database();
 
 $personne =$database->login($identifiant, $motdepasse);
+var_dump($personne);
 
 if($personne !== false){
    
