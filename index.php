@@ -7,6 +7,18 @@
         <meta charset="UTF-8">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>Page d'accueil</title>
+        <style>
+            body {
+                background-color: lightgreen;
+                display: flex;
+            }
+            
+            h1{
+                display: flex;
+                justify-content: center;
+                weight: bold;
+            }
+        </style>
     <body>
         <h1>Bienvenue au site dédié aux meetups loisirs!</h1>
         
