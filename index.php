@@ -6,21 +6,38 @@
     <head>
         <meta charset="UTF-8">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Page d'accueil</title>
         <style>
             body {
                 background-color: lightgreen;
                 display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                background-image: url("img/boys.jpg");
+                background-size: cover;
             }
             
             h1{
                 display: flex;
                 justify-content: center;
                 weight: bold;
+                font-size: 47px;
+                text-shadow: 1px 3px 14px #fff;
             }
+            
+            a {
+                text-decoration: none;
+                display:flex;
+                align-items: center;
+            }
+            
+        
         </style>
     <body>
         <h1>Bienvenue au site dédié aux meetups loisirs!</h1>
+        <!--<img src="img/boys.jpg" id="home"  alt="home"/> -->
         
 
 
