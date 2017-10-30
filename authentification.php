@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once './database.php';
+include_once './index.php';
 
 
 
@@ -10,7 +11,7 @@ $motdepasse = filter_input(INPUT_POST, 'idpsswd');
 $database = new Database();
 
 $personne =$database->login($identifiant, $motdepasse);
-var_dump($personne);
+//var_dump($personne);
 
 if($personne !== false){
    
@@ -26,12 +27,4 @@ if($personne !== false){
 
 
 
-/*if ($identifiant & $motdepasse = "personne/") {
-    echo "Votre mot de passe est correct";
-    include_once './index.php';
-    include_once './logout.php';
-} else {
-     echo "Votre mot de passe n'est pas correct, veuillez vous inscrire s'il vous plaît";
-     include_once './inscription.php';
-}*/
 

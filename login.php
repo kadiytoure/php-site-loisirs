@@ -5,6 +5,16 @@
         <title>Connexion</title>
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-image: url("img/boys.jpg");
+            background-size: cover;
+        }
+        
+   
+    </style>
     <body>
         <h1>Sign in</h1>
         <form class="form-horizontal" method="POST" action="authentification.php">

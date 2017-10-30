@@ -10,7 +10,7 @@
         <title>Page d'accueil</title>
         <style>
             body {
-                background-color: lightgreen;
+               
                 display: flex;
                 flex-direction: column;
                 margin: 0;
@@ -44,7 +44,7 @@
         <?php
         //lancer la session_start
         //Vérifier avec un isset si la variable $_SESSION contient bien une clef personne ( $_SESSION['personne'] )
-        session_start();
+      
         if (isset ($_SESSION['personne'])) {
              echo "<a href=\"logout.php\">Se deconnecter </a>";
             echo "<a href=\"deconnexion.php\"></a><br/>";
