@@ -9,7 +9,8 @@ class Database {
     
        private $db;
        public function __construct(){
-            $this->db = new PDO('mysql:host=localhost;dbname=events', 'toure', 'kadiy');
+           $infoDb = parse_ini_file('conf.ini');
+           $this->db = new PDO('mysql:host=localhost;dbname='.$infoDb['dbname'].';charset=utf8', $infoDb['username'], $infoDb['password']);
            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        } 
        
