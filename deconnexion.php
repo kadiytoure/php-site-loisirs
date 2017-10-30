@@ -1,6 +1,7 @@
 <?php
 
 include_once './database.php';
+include_once './index.php';
 $nom = filter_input(INPUT_POST, 'logout');
 
 

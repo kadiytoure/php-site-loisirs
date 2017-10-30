@@ -5,6 +5,23 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>Inscription</title>
     </head>
+    <style>
+              body {
+               
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                background-image: url("img/boys.jpg");
+                background-size: cover;
+            }
+            form {
+                text-shadow: 1px 3px 14px #fff;
+                font-weight: 100px;
+                font-size: 27px;
+            }
+            
+    </style>
     <body>
         <h1>Formulaire d'inscription</h1>
         <form class='form-horizontal'method="POST" action="utilisateur.php">

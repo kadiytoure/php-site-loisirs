@@ -8,6 +8,14 @@ include_once './personne.php';
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <style>
+            body {
+            background-image: url("img/mer.jpg");
+            background-size: cover;
+            }
+            
+        </style>
+        
     </head>
     <body>
         <h1>Deconnexion</h1>

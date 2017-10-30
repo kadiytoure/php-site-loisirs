@@ -3,6 +3,7 @@
 <?php
 include_once './personne.php';
 include_once './database.php';
+include_once './index.php';
 
 $name = filter_input(INPUT_POST, 'idname');
 $firstname = filter_input(INPUT_POST, 'idprenom');

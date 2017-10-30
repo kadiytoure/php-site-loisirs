@@ -2,7 +2,8 @@
 
  include_once './database.php';
  include_once './personne.php';
-include_once './evenement.php';
+ include_once './evenement.php';
+ include_once './index.php';
 
         // TODO: Lire les événements depuis la base de données (récupérer un tableau d'événements)
         // TODO: afficher les événements.

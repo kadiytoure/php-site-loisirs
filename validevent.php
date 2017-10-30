@@ -1,5 +1,6 @@
 <?php
 include_once './database.php';
+include_once './index.php';
 session_start();
 /* 
  * To change this license header, choose License Headers in Project Properties.

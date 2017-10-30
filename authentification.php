@@ -21,8 +21,8 @@ if($personne !== false){
     //echo  "<nav><a href=\"Authentification.php\"/>accéder à son espace personnel</a></nav>";
 }else{
     echo 'Votre identifiant et/ou votre mot de passe ne sont pas corrects.';
-    echo "<nav><a href=\"inscription.php\"/>Inscris-toi </a></nav>";
-    echo "<nav><a href=\"login.php\"/>Où reconnecte-toi </a></nav></br>";
+    //echo "<nav><a href=\"inscription.php\"/>Inscris-toi </a></nav>";
+    //echo "<nav><a href=\"login.php\"/>Où reconnecte-toi </a></nav></br>";
 }
 
 
