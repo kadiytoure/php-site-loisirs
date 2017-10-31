@@ -17,6 +17,7 @@
                 padding: 0;
                 background-image: url("img/boys.jpg");
                 background-size: cover;
+                min-height: 100vh;
             }
             
             h1{
