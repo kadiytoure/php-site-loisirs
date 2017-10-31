@@ -11,12 +11,18 @@
              flex-direction: column;
              margin: 0;
              padding: 0;
-             background-image: url("img/boys.jpg");
+             background-image: url("img/cover.jpg");
              background-size: cover;
+            
         }
         
         form {
-            text-shadow: 1px 3px 14px #fff;
+            margin: 3em;
+            padding: 0;
+        }
+        
+        #places {
+            width: 203px;
         }
     </style>
     </head>
@@ -81,10 +87,10 @@
              <input type="checkbox" name= "interet" value="free" id="idfree" />
             <label for="decouvrir">Evenement libre</label>
             </div>
-            <br/>
+            
         <div class="form-group">
-        <label for='descriptif'>Descriptif:</label>
-        <textarea  name='descriptif' id='descriptif' cols='47' rows='10'></textarea>
+        <label for='descriptif' class="col-2 col-form-label">Descriptif:</label>
+        <textarea  name='descriptif' id='descriptif' cols='45' rows='10'></textarea>
         <br/>
         </div>
         <div class="form-group">
@@ -96,9 +102,7 @@
         <br/>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-        <input type='submit' class='btn btn-default' value='Valider' />
+        <input type='submit' class='btn btn-primary' value='Valider' />
     </form>
-    </body>
-</html>
-
-
+        
+    
