@@ -16,8 +16,9 @@
    
     </style>
     <body>
-        <h1>Sign in</h1>
+        
         <form class="form-horizontal" method="POST" action="authentification.php">
+            <h1>Sign in</h1>
             <div class="form-group">
                 <label for="pseudo" class="col-sm-2 control-label">Ton identifiant :</label>
                 <div class="col-sm-10">
@@ -32,7 +33,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn-btn-default">Connexion</button><br/>
+            <button type="submit" class="btn btn-primary">Sign In</button><br/>
         </form>
         </body>
 </html>
