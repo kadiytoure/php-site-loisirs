@@ -11,8 +11,10 @@
             padding: 0px;
             background-image: url("img/boys.jpg");
             background-size: cover;
+            background-repeat: no-repeat;
         }
         
+      
    
     </style>
     <body>

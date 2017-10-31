@@ -5,14 +5,16 @@
         <meta charset="UTF-8">
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Page d'accueil</title>
+        <title>Evenements crées</title>
         <style>
             body {
                 display: flex;
-                flex-direction: row;
+               
+                flex-wrap: wrap;
                 margin: 0;
                 padding: 0;
                 background-image: url("img/mer.jpg");
+                background-repeat: no-repeat;
                 background-size: cover;
                 min-height: 100vh;
             }

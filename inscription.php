@@ -10,16 +10,10 @@
     </head>
     <style>
               body {
-               /*
-               display: flex;
-                flex-direction: column;
-                margin: 0;
-                padding: 0;
-                
-               
-               */
+              
                background-image: url("img/girl.jpg");
                background-size: cover;
+               background-repeat: no-repeat;
                 
             }
             form {
