@@ -14,7 +14,7 @@
             background-repeat: no-repeat;
         }
         
-      
+       
    
     </style>
     <body>
@@ -24,13 +24,13 @@
             <div class="form-group">
                 <label for="pseudo" class="col-sm-2 control-label">Ton identifiant :</label>
                 <div class="col-sm-10">
-            <input id="pseudo" name="idpseudo" type="text" value=""/><br/>
+            <input id="pseudo" class="form-control" name="idpseudo" type="text" value=""/><br/>
                 </div>
             </div>
             <div class="form-group">
             <label for="psswd" class="col-sm-2 control-label">Ton mot de passe :</label>
             <div class="col-sm-10"> 
-            <input id="psswd" name="idpsswd" type="password" value=""/><br/>
+            <input id="psswd" class="form-control" name="idpsswd" type="password" value=""/><br/>
             </div>
             </div>
             <div class="form-group">
