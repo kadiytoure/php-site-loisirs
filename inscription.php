@@ -45,6 +45,14 @@
             #pays {
                 width: 245px;
             }
+            
+            label {
+                font-weight: bold;
+            }
+            
+            p {
+                font-weight: bold;
+            }
     </style>
     <body>
         <!--

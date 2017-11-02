@@ -32,7 +32,7 @@
             a {
                 text-decoration: none;
                 display:flex;
-                justify-content: flex-start;
+                
             }
             
         

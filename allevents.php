@@ -25,6 +25,14 @@
                 weight: bold;
                 font-size: 47px;
                 text-shadow: 1px 3px 14px #fff;
+                
+            }
+            
+            section {
+                display: flex;
+                flex-direction: row;
+                weight: bold;
+                color: white;
             }
         </style>
     <body>
