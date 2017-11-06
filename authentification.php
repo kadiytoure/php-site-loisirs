@@ -17,7 +17,7 @@ if($personne !== false){
    
     $_SESSION['personne'] = $identifiant;
     echo "Ton identifiant et ton mot de passe sont corrects. Tu t'appelles ".$_SESSION['personne'];
-    //echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav></br>";
+    echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav></br>";
     //echo  "<nav><a href=\"Authentification.php\"/>accéder à son espace personnel</a></nav>";
 }else{
     echo 'Votre identifiant et/ou votre mot de passe ne sont pas corrects.';
