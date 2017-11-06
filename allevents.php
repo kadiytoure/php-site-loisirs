@@ -13,7 +13,7 @@
                 flex-wrap: wrap;
                 margin: 0;
                 padding: 0;
-                background-image: url("img/mer.jpg");
+                background-color: lightgray;
                 background-repeat: no-repeat;
                 background-size: cover;
                 min-height: 100vh;
