@@ -7,7 +7,7 @@ $nom = filter_input(INPUT_POST, 'logout');
 
 
 //edrheader('location: ./logout.php');
-session_start();
+//session_start();
 if (isset($_POST['logout']) && isset($_SESSION['personne'])) {
     $quitter=new Database();
     $quitter->logout();
