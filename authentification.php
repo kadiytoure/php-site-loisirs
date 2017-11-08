@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once './database.php';
-include_once './index.php';
+//include_once './index.php';
 
 
 
@@ -17,6 +17,8 @@ if($personne !== false){
    
     $_SESSION['personne'] = $identifiant;
     echo "Ton identifiant et ton mot de passe sont corrects. Tu t'appelles ".$_SESSION['personne'];
+    header("Location: index.php");
+    //faire une redirection vers la page d'accueil avec header('location', 'index.php')
     //echo "<nav><a href=\"index.php\"/>retour à la page d'accueil </a></nav></br>";
     //echo  "<nav><a href=\"Authentification.php\"/>accéder à son espace personnel</a></nav>";
 }else{

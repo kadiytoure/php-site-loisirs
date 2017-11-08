@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,7 +56,7 @@
      
         $afficheevent = $database->getEvenements();
         
-        ($afficheevent);
+        
         foreach($afficheevent as $showevent){
         
            $showevent->genererhtmlevents();
