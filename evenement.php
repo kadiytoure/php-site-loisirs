@@ -70,18 +70,19 @@ class Evenement {
     }
 
     function genererhtmlevents() {
-        echo'<h2>informations generales sur l\'evenement:</h2>';
+        echo'<h1>Meetups Sports et Loisirs:</h1>';
+        echo '</br>';
         echo '<section>';
-        echo "<h3> nom : </h3><p>" . $this->nom . '</p>';
-        echo "<h3> organisateur : </h3><p>" . $this->organisateur . '</p>';
-        echo "<h3>date : </h3><p>" . $this->date . '</p>';
-        echo "<h3> lieu : </h3><p>" . $this->lieu . '</p>';
-        echo "<h3> duree : </h3><p> " . $this->duree . '</p>';
-        echo "<h3> places : </h3><p>" . $this->places . '</p>';
-        echo "<h3> ressources : </h3><p>" . $this->ressources . '</p>';
-        echo "<h3> capacite : </h3><p>" . $this->capacite . '</p>';
-        echo "<h3> description : </h3><p> " . $this->categorie . '</p>';
-        echo "<h3> description : </h3><p> " . $this->description . '</p>';
+        echo "<h3> Nom : </h3><p>" . $this->nom . '</p>';
+        echo "<h3> Organisateur : </h3><p>" . $this->organisateur . '</p>';
+        echo "<h3> Date : </h3><p>" . $this->date . '</p>';
+        echo "<h3> Lieu : </h3><p>" . $this->lieu . '</p>';
+        echo "<h3> Duree : </h3><p> " . $this->duree . '</p>';
+        echo "<h3> Places : </h3><p>" . $this->places . '</p>';
+        echo "<h3> Ressources : </h3><p>" . $this->ressources . '</p>';
+        echo "<h3> Capacite : </h3><p>" . $this->capacite . '</p>';
+        echo "<h3> Categorie : </h3><p> " . $this->categorie . '</p>';
+        echo "<h3> Description : </h3><p> " . $this->description . '</p>';
        
         if (isset($_SESSION['personne']) && $_SESSION['personne'] == $this->organisateur) {
             echo '<form method="post" action="rmevent.php">';

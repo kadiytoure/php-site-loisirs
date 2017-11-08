@@ -9,8 +9,8 @@
         <style>
             body {
                 display: flex;
-               
                 flex-wrap: wrap;
+                flex-direction: column;
                 margin: 0;
                 padding: 0;
                 background-color: lightgray;
@@ -30,9 +30,12 @@
             
             section {
                 display: flex;
-                flex-direction: row;
-                weight: bold;
+                flex-wrap: wrap;
+                flex-direction: column;
+                font-weight: bold;
+                font-size: 16px;
                 color: white;
+                align-items: center;
             }
         </style>
     <body>
