@@ -30,7 +30,6 @@
             
             section {
                 display: flex;
-                flex-wrap: wrap;
                 flex-direction: column;
                 font-weight: bold;
                 font-size: 16px;
