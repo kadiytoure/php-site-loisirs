@@ -33,7 +33,7 @@
                 flex-direction: column;
                 font-weight: bold;
                 font-size: 16px;
-                color: white;
+                color: black;
                 align-items: center;
             }
         </style>
