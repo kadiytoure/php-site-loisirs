@@ -68,7 +68,7 @@ class Database {
             //faire un second foreach pour parcourir tous les fichiers
             //contenus dans chaque sous dossier
             // supprimer les '.' && '..';
-            echo $dossier_organiser ;
+            //echo $dossier_organiser ;
             if ($dossier_organiser !== '.' && $dossier_organiser !== '..') {
                 $files = scandir("Evenement/" . $dossier_organiser);
                 foreach ($files as $file) {
